@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Chip from '@material-ui/core/Chip';
-import { removeSubscription } from '../../actions/subscription';
 
 const SelectedOptions = ({
   chips = [],

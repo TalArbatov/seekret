@@ -96,7 +96,6 @@ export const StyledPopup = styled.div`
     animation: textFadeIn ease-in 1s;
     height: 90%;
     form {
-      
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -147,11 +146,6 @@ export const StyledPopup = styled.div`
       opacity: 0;
     }
   }
-  
-
-`;
-export const StyledDropdownWrapper = styled.div`
-  width: 100%;
 `;
 
 export const StyledDropdown = styled.div`
@@ -169,11 +163,6 @@ export const StyledDropdown = styled.div`
     margin-left: 5px;
   }
 `;
-
-// export const StyledSubmitButton = styled.button`
-//   position: relative;
-//   bottom: 0;
-// `;
 
 export const StyledInput = styled.input`
   border: none;
@@ -201,14 +190,10 @@ export const StyledSuggestion = styled.div`
 
 export const Content = styled.div`
   margin: 60px 0 30px 60px;
-  
 `;
 
 export const StyledTitle = styled.div`
   span {
     font-size: 30px;
-    
-    
-
   }
 `;
