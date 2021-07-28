@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Popup from './Popup';
+import Button from '@material-ui/core/Button';
 
 const SecondPage = () => {
   const [popupActive, setPopupActive] = useState(false);
@@ -18,7 +19,13 @@ const SecondPage = () => {
 
   return (
     <div>
-      <button onClick={ openPopup }>Subscribe to our channel!</button>
+      <Button 
+        style={ { width: 'fit-content', backgroundColor: '#e3463b', marginTop: '25px' } } 
+        onClick={ openPopup }
+        variant="contained" 
+        color="primary">
+        Subscribe to our channel
+      </Button>
       { popupActive && <Popup closePopup={ closePopup } customClass={ popupClass } /> }
     </div>
   )

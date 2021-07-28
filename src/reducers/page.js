@@ -2,7 +2,8 @@ import { CHANGE_PAGE } from '../actions/action-types';
 import PAGES from '../constants/pages';
 
 const defaultState = {
-  page: PAGES.FIRST_PAGE
+  page: PAGES.FIRST_PAGE,
+  postSubscription: false
 };
 
 const pageReducer = (state = defaultState, action) => {
@@ -12,7 +13,8 @@ const pageReducer = (state = defaultState, action) => {
     case CHANGE_PAGE:
       return {
         ...state,
-        page: action?.payload?.page
+        page: action?.payload?.page,
+        postSubscription: action?.payload?.postSubscription
       }
     default:
       return state;
