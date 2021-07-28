@@ -8,7 +8,7 @@ const SelectedOptions = ({
   // dropdownWidth = 0
 }) => {
   const rowRef = useRef(null)
-  // const [width, setWidth] = useState(0);
+  const [width, setWidth] = useState(0);
   useEffect(() => {
     setWidth(rowRef.current.offsetWidth);
   }, [rowRef.current])
@@ -16,7 +16,7 @@ const SelectedOptions = ({
   const hiddenChips = [...chips.slice(3, chips.length)].length;
 
   const getMaxChips = chips => {
-    return slicedChips = [...chips].slice(0, 3);
+    return [...chips].slice(0, 3);
   };
 
   return (
