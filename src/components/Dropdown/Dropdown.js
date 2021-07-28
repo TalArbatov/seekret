@@ -1,24 +1,16 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { StyledDropdown, StyledInput, StyledDropdownWrapper } from '../../styles';
 import SelectedOptions from './SelectedOptions';
 import Suggestions from './Suggestions';
-import { useSelector, useDispatch } from 'react-redux';
 import Button from '@material-ui/core/Button';
-import { removeSubscription, updateSubscriptions } from '../../actions/subscription';
+import { updateSubscriptions } from '../../actions/subscription';
 import useLocalStorage from '../../hooks/useLocalStorage';
 import { changePage } from '../../actions/page';
 import PAGES from '../../constants/pages';
 
 const Dropdown = ({ closePopup }) => {
-  const dispatch = useDispatch();
   const [active, setActive] = useState(false);
   const [search, setSearch] = useState('');
-  // const [chips, setChips] = useState(['hello', 'world', 'bunch of chips', 'testststest', 'test', 'tetst', 'tststst', 'testststest', 'test', 'tetst', 'last', 'afterlast'])
-  // const searchInput = React.useRef(null);
-  // const chipsMem = useSelector(state => state.subscription.subscriptions);
-  // const optionsMem = useSelector(state => state.subscription.options);
-
-  // TODO useLocalStorage
   
   const [chipsLS, setChipsLS] = useLocalStorage('chips', []);
   const [chips, setChips] = useState(chipsLS);
@@ -29,13 +21,11 @@ const Dropdown = ({ closePopup }) => {
   };
 
   const removeChip = subscription => {    
-    // dispatch(removeSubscription(subscription));
     setChips(chips.filter(chip => chip !== subscription))
   };
 
   const addChip = suggestion => {
     setChips([suggestion, ...chips]);
-    // dispatch(addSubscription(suggestion));
   };
 
   const renderContent = () => {
