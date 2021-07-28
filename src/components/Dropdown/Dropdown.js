@@ -22,7 +22,6 @@ const Dropdown = ({ closePopup }) => {
   const dropdown = useRef(null);
 
   useEffect(() => {
-    console.log('tal1 on update', dropdown.current.offsetWidth);
     setWidth(dropdown.current.offsetWidth)
   }, [dropdown.current]);
 

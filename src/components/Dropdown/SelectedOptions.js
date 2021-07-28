@@ -5,10 +5,10 @@ import { removeSubscription } from '../../actions/subscription';
 const SelectedOptions = ({
   chips = [],
   onDelete,
-  dropdownWidth = 0
+  // dropdownWidth = 0
 }) => {
   const rowRef = useRef(null)
-  const [width, setWidth] = useState(0);
+  // const [width, setWidth] = useState(0);
   useEffect(() => {
     setWidth(rowRef.current.offsetWidth);
   }, [rowRef.current])
@@ -16,10 +16,7 @@ const SelectedOptions = ({
   const hiddenChips = [...chips.slice(3, chips.length)].length;
 
   const getMaxChips = chips => {
-    
-    const slicedChips = [...chips].slice(0, 3);
-    // slicedChips.push(`${hiddenChips} more`);
-    return slicedChips;
+    return slicedChips = [...chips].slice(0, 3);
   };
 
   return (
